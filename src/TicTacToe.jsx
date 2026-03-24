@@ -51,8 +51,6 @@ export default function TicTacToe() {
       setMessage("🤝 It's a draw!");
       return;
     }
-
-    // ✅ FIXED TURN LOGIC HERE
     setBoard(newBoard);
 
     const nextTurn = !xTurn;
