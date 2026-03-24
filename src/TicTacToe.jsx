@@ -24,7 +24,7 @@ export default function TicTacToe() {
   };
 
   const isDraw = (b) => {
-    return b.every(row => row.every(cell => cell !== ""));
+    return b.every((row) => row.every((cell) => cell !== ""));
   };
 
   const handleClick = (row, col) => {
@@ -52,9 +52,12 @@ export default function TicTacToe() {
       return;
     }
 
+    // ✅ FIXED TURN LOGIC HERE
     setBoard(newBoard);
-    setXTurn(!xTurn);
-    setMessage(!xTurn ? "⭕ O's Turn" : "❌ X's Turn");
+
+    const nextTurn = !xTurn;
+    setXTurn(nextTurn);
+    setMessage(nextTurn ? "❌ X's Turn" : "⭕ O's Turn");
   };
 
   const resetBoard = () => {
@@ -90,4 +93,4 @@ export default function TicTacToe() {
       </button>
     </div>
   );
-}
+}npm
