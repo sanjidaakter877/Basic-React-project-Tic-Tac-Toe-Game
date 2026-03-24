@@ -93,4 +93,4 @@ export default function TicTacToe() {
       </button>
     </div>
   );
-}npm
+}
